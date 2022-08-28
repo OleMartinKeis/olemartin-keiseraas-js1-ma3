@@ -4,12 +4,12 @@ async function getGames() {
 
     const response = await fetch(url);
     const results = await response.json();
-    console.log(results)
 
-    const gamesList = results.all;
+
+    const gamesList = results.results;
 
     for(let i = 0; i < gamesList.length; i++) {
-        console.log(gamesList[i].text);
+        console.log(gamesList[i]);
     }
 }
 
